@@ -1,0 +1,62 @@
+{
+    "bot": {
+        "owner_ids": [],
+        "shop_id": null,
+        "shop_id_note": "Keep shop_id null to use all shops. Set a SellAuth shop ID to use one shop.",
+        "customer_role_name": "Customer"
+    },
+    "discord": {
+        "ticket_category_id": null,
+        "support_role_id": null,
+        "staff_role_id": null
+    },
+    "bot_token": "",
+    "sellauth_api_key": "",
+    "order_encryption_key": "d8PUKd9B0GhF9rbd4BTApgQEoaBglqsWHE9-BNUOomY=", 
+    "automated_checkout": {
+        "enabled": true,
+        "post_purchase_reward": {
+            "enabled": true,
+            "discount_percent": 10,
+            "max_uses": 1,
+            "valid_for_days": 30,
+            "code_prefix": "THANKYOU",
+            "include_discord_username": true,
+            "apply_globally": true
+        },
+        "checkout": {
+            "currency": "LTC",
+            "retry_attempts": 5,
+            "retry_delay_seconds": 2,
+            "retry_delay_cap_seconds": 15,
+            "payment_poll_interval_seconds": 5,
+            "payment_mempool_interval_seconds": 3,
+            "payment_timeout_seconds": 1800,
+            "payment_poll_concurrency": 20,
+            "currency_selection": {
+                "enabled": true,
+                "allowed": []
+            }
+        }
+    },
+    "monitoring": {
+        "enabled": true,
+        "all_shops": true,
+        "auto_create_channels": true,
+        "orders": {
+            "enabled": true,
+            "poll_interval_seconds": 60,
+            "error_retry_interval_seconds": 10
+        },
+        "feedback": {
+            "enabled": false,
+            "poll_interval_seconds": 60,
+            "error_retry_interval_seconds": 10
+        },
+        "out_of_stock": {
+            "enabled": false,
+            "poll_interval_seconds": 240,
+            "error_retry_interval_seconds": 10
+        }
+    }
+}
