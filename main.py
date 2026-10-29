@@ -1,24 +1,6 @@
-
-
 from __future__ import annotations
-
-from getpass import getpass
-
-STARTUP_KEY = "fUCKYOUSTUPIDDWDWODGFUCKYOUSTUPIDSKIDDOFUCKYOUNIGGAFUCKYOUEVERYTWHERESTYOPUSINGAICLAUDETOCRACKMNE"
-
-
-def _require_startup_key() -> None:
-    if getpass("Enter startup key: ") != STARTUP_KEY:
-        print("Incorrect startup key.")
-        raise SystemExit(1)
-
-
-_require_startup_key()
-
 import asyncio
-
 import discord
-
 import src.logger.logger as log
 from src.config import BOT_TOKEN, LOGGING_CONFIG, SHOP_ID
 
